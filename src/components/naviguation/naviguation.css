@@ -62,3 +62,29 @@ nav {
 #burger-menu:hover {
     color: var(--accent);
 }
+/* Media query */
+@media screen and (max-width: 780px) {
+    #burger-menu {
+        display: block;
+    }
+    .naviguation {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background: var(--bg);
+        text-align: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--text);
+        border-top: 1px solid var(--text);
+        transition: 0.2s ease-in-out;
+    }
+    .naviguation a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .naviguation.active {
+        left: 0%;
+    }
+}

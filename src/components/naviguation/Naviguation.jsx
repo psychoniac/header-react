@@ -5,7 +5,7 @@ import './naviguation.css';
 function Naviguation() {
     const [isActive, setIsActive] = useState(false);
 
-    const HandleBurgerClick = () => {
+    const handleBurgerClick = () => {
         setIsActive(!isActive);
     };
 
@@ -20,7 +20,7 @@ function Naviguation() {
                     alt='logo de la marque'
                 />
             </a>
-            <ul className='naviguation'>
+            <ul className={`naviguation ${!isActive ? 'active' : ''}`}>
                 <li>
                     <a
                         href='#'
@@ -43,7 +43,10 @@ function Naviguation() {
                 <div className='icon-user'>
                     <ion-icon name='person'></ion-icon>
                 </div>
-                <div id='burger-menu'>
+                <div
+                    id='burger-menu'
+                    onClick={handleBurgerClick}
+                >
                     <ion-icon name='menu-outline'></ion-icon>
                 </div>
             </div>
