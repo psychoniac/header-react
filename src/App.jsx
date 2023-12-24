@@ -5,8 +5,8 @@ import Naviguation from './components/naviguation/Naviguation';
 function App() {
     return (
         <>
-            <Hero />
             <Naviguation />
+            <Hero />
         </>
     );
 }
